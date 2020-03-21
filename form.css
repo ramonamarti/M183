@@ -27,43 +27,4 @@ p {
     width: 3.5em;
 } input[type="text"].medium {
     width: 9em;
-} #reg-box {
-    width: 350px;
-    height: 600px;
-    margin: 10px auto;
-    background-color: lightblue;
-} #reg {
-    font-variant: small-caps;
-    font-weight: bold;
-    background-color: lightblue;
-    padding: 3px;
-} .gender-label {
-    margin-right: 20px;
-} #birthday {
-    width: 150px;
-} #country {
-    width: 155px;
-    margin-left: 2px;
-    margin-right: 3px;
-} .check-end {
-    margin: 10px 5px;
-} .end {
-    margin: 10px 5px;
-    padding: 5px 10px;
-    font: 12pt serif;
-    font-weight: bold;
-} #reset {
-    background-color: lightcoral;
-} #submit {
-    background-color: palegreen;
-}
-
-#picture {
-   /* background-color: gainsboro; */
-} #upload {
-   background-color: gainsboro;
-} #comment {
-    margin: auto;
-    width: 300px;
-    height: 100px;
 }
