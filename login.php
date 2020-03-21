@@ -7,7 +7,7 @@
 		<script src="js-library.js"></script>
 	</head>
     <body>
-		<form method="post" action="vorlage.php">
+		<form method="post" action="login.php">
 			<fieldset id="login-box">
 				<legend id="login">Login</legend>
 				<p>
