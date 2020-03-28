@@ -5,7 +5,7 @@ if(isset($_REQUEST['logout'])&&$_REQUEST['logout']){
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="de">
 	<head>
 		<title>Formular</title>
         <link rel="stylesheet" type="text/css" href="form.css" />
