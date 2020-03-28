@@ -1,6 +1,7 @@
 <?php
+include_once 'DB.php';
 session_start();
-if(!(isset($_SESSION['user'])&&$_SESSION['user']=='admin')){
+if(!(isset($_SESSION['user'])&&$_SESSION['user'])){
     header('location: login.php');
 }
 ?>
@@ -12,6 +13,7 @@ if(!(isset($_SESSION['user'])&&$_SESSION['user']=='admin')){
     <script src="js-library.js"></script>
 </head>
 <body>
+<a href="main.php" class="link">Main</a>
 
 
 </body>
