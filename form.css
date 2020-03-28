@@ -1,13 +1,23 @@
 p {
     margin: 15px 5px;
-} .login {
+}
+
+body{
+    padding: 2rem 10px;
+}
+
+.login {
     float: right;
-} #login-box {
+}
+
+#login-box {
     width: 280px;
     height: 130px;
     margin: 10px auto;
     background-color: lightblue;
-} #login {
+}
+
+#login {
     font-variant: small-caps;
     font-weight: bold;
     background-color: lightblue;
@@ -16,15 +26,40 @@ p {
 
 p {
     margin: 15px 5px;
-} .center {
+}
+
+.center {
     width: 300px;
     margin: 2px auto;
-} .right {
+}
+
+.right {
     float: right;
-} input[type="text"], [type="email"], [type="password"] {
+}
+
+input[type="text"], [type="email"], [type="password"] {
     width: 150px;
-} input[type="text"].small {
+}
+
+input[type="text"].small {
     width: 3.5em;
-} input[type="text"].medium {
+}
+
+input[type="text"].medium {
     width: 9em;
+}
+
+.link {
+    background: lightblue;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 10px;
+    display: block;
+    text-align: center;
+    text-decoration: navajowhite;
+    color: black;
+}
+
+.logout{
+    background: lemonchiffon;
 }
