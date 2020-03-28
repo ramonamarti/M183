@@ -1,16 +1,23 @@
 <?php
-
-$hashed = password_hash('admin', PASSWORD_DEFAULT);
+include_once 'DB.php';
 if (isset($_REQUEST['submit'])) {
-    if (password_verify($_REQUEST['password'], $hashed)
-        && $_REQUEST['username'] == 'admin') {
+    $hash = password_hash($_REQUEST['password'], PASSWORD_DEFAULT);
+    $hashed = password_hash('admin', PASSWORD_DEFAULT);
+    if (DB::selectTable('users', 'username = "' . $username = $_REQUEST['username'] . '" and password = "' . $hash . '"')
+        || password_verify($_REQUEST['password'], $hashed) && $username = $_REQUEST['username'] == 'admin') {
         session_start();
-        $_SESSION['user'] = 'admin';
+        $_SESSION['user'] = $username;
     } else {
-        header('location: login.php');
+        session_start();
+        if (!(isset($_SESSION['user']) && $_SESSION['user'])) {
+            header('location: login.php');
+        }
     }
 } else {
-    header('location: login.php');
+    session_start();
+    if (!(isset($_SESSION['user']) && $_SESSION['user'])) {
+        header('location: login.php');
+    }
 }
 
 ?>
