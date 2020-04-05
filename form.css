@@ -6,26 +6,35 @@ body{
     padding: 2rem 10px;
 }
 
-.login {
+.login, .article, .file {
     float: right;
 }
 
-#login-box {
+#login-box, #article-box, #file-box {
     width: 280px;
     height: 130px;
     margin: 10px auto;
-    background-color: lightblue;
+    background-color: lightgreen;
 }
 
-#login {
+#login, #article, #file {
     font-variant: small-caps;
     font-weight: bold;
-    background-color: lightblue;
+    background-color: lightgreen;
     padding: 3px;
 }
 
 p {
     margin: 15px 5px;
+}
+
+table {
+    margin: 10px auto;
+}
+
+table td,table th {
+    min-width: 50px;
+    text-align: left;
 }
 
 .center {
@@ -58,8 +67,18 @@ input[type="text"].medium {
     text-align: center;
     text-decoration: navajowhite;
     color: black;
+    font-weight: bold;
 }
 
-.logout{
+.logout,.check span {
     background: lemonchiffon;
+    padding: 20px;
+   display: block;
+}
+.check span{
+    margin-top: 30px;
+}
+dir{
+    margin: 10px 0;
+    padding-left: 15px;
 }

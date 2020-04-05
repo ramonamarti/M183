@@ -9,9 +9,11 @@ $check = '';
 if (isset($_REQUEST['submit']) && !empty($_REQUEST['username']) && !empty($_REQUEST['password'])) {
     $username = $_REQUEST['username'];
     $password = password_hash($_REQUEST['password'], PASSWORD_DEFAULT);
-    $db = DB::insertData('users', '"' . $username . '","' . $password . '"', 'username,password');
+    $db = DB::insertUser( $username , $password );
     if ($db) {
-        $check = 'Eintrag erstellt';
+        $check = '<span>Eintrag erstellt</span>';
+    } elseif (!$db){
+        $check = '<span>Error</span>';
     }
 }
 ?>
@@ -24,8 +26,8 @@ if (isset($_REQUEST['submit']) && !empty($_REQUEST['username']) && !empty($_REQU
     <script src="js-library.js"></script>
 </head>
 <body>
-<p class="logout"><?= $check ?></p>
 <a href="main.php" class="link">Main</a>
+<p class="check"><?= $check ?></p>
 
 <form method="post" action="">
     <fieldset id="login-box">
@@ -43,7 +45,14 @@ if (isset($_REQUEST['submit']) && !empty($_REQUEST['username']) && !empty($_REQU
         <input type="submit" class="login" name="submit" value="Senden"/>
     </fieldset>
 </form>
-
+<table>
+    <?php  $users = DB::selectUser('%');
+    foreach ($users as $user) {  ?>
+        <tr>
+            <td><?php echo $user['id'] ?></td><td><?php echo $user['username'] ?></td>
+        </tr>
+    <?php } ?>
+</table>
 </body>
 </html>
 
