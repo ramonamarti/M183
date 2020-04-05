@@ -49,7 +49,7 @@ if (isset($_REQUEST['submit']) && !empty($_REQUEST['username']) && !empty($_REQU
     <?php  $users = DB::selectUser('%');
     foreach ($users as $user) {  ?>
         <tr>
-            <td><?php echo $user['id'] ?></td><td><?php echo $user['username'] ?></td>
+            <td><?php echo $user['id'] ?></td><td><?php echo htmlentities($user['username']) ?></td>
         </tr>
     <?php } ?>
 </table>

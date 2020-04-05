@@ -78,7 +78,7 @@ if (isset($_REQUEST['submitdel']) && !empty($_REQUEST['aid'])
     foreach ($articles as $article) { ?>
         <tr>
             <td><?php echo $article['id'] ?></td>
-            <td><?php echo $article['name'] ?></td>
+            <td><?php echo htmlentities($article['name']) ?></td>
         </tr>
     <?php } ?>
 </table>
