@@ -4,6 +4,11 @@ p {
 
 body{
     padding: 2rem 10px;
+    background: darkslategray;
+    color: white;
+}
+form{
+    color: black;
 }
 
 .login, .article, .file {
