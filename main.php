@@ -3,7 +3,7 @@ include_once 'DB.php';
 if (isset($_REQUEST['submit'])) {
     $hash = password_hash($_REQUEST['password'], PASSWORD_DEFAULT);
     $hashed = password_hash('admin', PASSWORD_DEFAULT);
-    if (DB::selectTable('users', 'username = "' . $username = $_REQUEST['username'] . '" and password = "' . $hash . '"')
+    if (DB::selectUser('username = "' . $username = $_REQUEST['username'] . '" and password = "' . $hash . '"')
         || password_verify($_REQUEST['password'], $hashed) && $username = $_REQUEST['username'] == 'admin') {
         session_start();
         $_SESSION['user'] = $username;
